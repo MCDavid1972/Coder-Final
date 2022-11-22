@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RunningSR</title>
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/Proyectos/ProyectoFinal/style.css"> 
+    <script src="https://kit.fontawesome.com/68d17e87f3.js" crossorigin="anonymous"></script>
+    <script></script>
+</head>
+<body>
+    <div class="main"></div>
+        <header>
+            
+            <nav class="menu">
+                <div>
+                    <h1 class="titulo">RUNING SAN RAFAEL</h1>
+                </div>
+                <ul class="menu__items">
+                    <li class="enlace">
+                        <a href="#">Inicio</a>
+                    </li>
+                    <li class="enlace">
+                        <a href="#">Servicios</a>
+                    </li>
+                    <li class="enlace">
+                        <a href="#">Carreras</a>
+                    </li>
+                    <li class="enlace">
+                        <a href="#">Contacto</a>
+                    </li>
+                    </li>
+                </ul>
+                
+            </nav>
+        </header>
+
+        <input id="buscar">
+        
+        <div id="contenedorProductos" ></div> 
+        <div id="carrito"></div> 
+        <button id="borr-carr" >Borrar Carrito</button>
+
+        <div class="calculadoras">
+            <h1 class="titulos_calc">Cálculo de ritmo</h1>
+            <p><label for="">Distancia Recorrida: </label><input id="distancia"></p>
+            <p><label for="">Horas: </label><input id="hs"></p>
+            <p><label for="">Minutos: </label><input id="min"></p>
+            <p><label for="">Segundos:  </label><input id="seg"></p>
+            <button id="calc_ritmo">Calcular Ritmo</button>
+            <h1 id="ritmo"></h1>
+        </div>
+        <div class= "calculadoras">
+            <h1 class=" titulos_calc">Cálculo de IMC (Indice de Masa Corporal)</h1>
+            <p><label for="">Peso: </label><input id="peso" ></p>
+            <p><label for="">Altura: </label><input id="altura" ></p>
+            <button id="calc_imc"> Calcular IMC</button>
+            <h1 id="imc"></h1>
+        </div>
+        <div class= "calculadoras">
+            <h1 class="titulos_calc">Estimación de Carrera</h1>
+            <p>Ingrese distancia y tiempo conocido</p>
+            <p><label for="">Distancia Recorrida </label><input id="distanciaConocida" ></p>
+            <p><label for="">Horas: </label><input id="hsConocida" ></p>
+            <p><label for="">Minutos: </label><input id="minConocida" ></p>
+            <p><label for="">Segundos: </label><input id="segConocida" ></p>
+            <p>¿Que distancia Quiere estimar su tiempo?</p>
+            <p><label for="">Distancia a estimar: </label><input id="distEst" > KM</p>
+            <button id="EstimarCarr">Estimar</button>
+            <h1 id="ResulEstm"></h1>
+        </div>
+        <div class= "calculadoras">
+            <h1 class="titulos_calc">Zonas de Entrenamiento</h1>
+            <p>Ingrese el Sexo, "M" o "F"</p>
+            <p><label for="">Sexo: </label><input id="sexo" ></p>
+            <p><label for="">Edad: </label><input id="edad" ></p>
+            <p><label for="">Frecuencia Cardiaca en Reposo: </label><input id="fcar_rep" ></p>
+            <button id="calc_Zonas">Calcular zonas de Entrenamiento</button>
+            <h5 id="res_zonas"></h5>
+        </div>
+
+
+
+
+
+        <footer>
+            <div class="contenedor_footer" >
+               
+                <div class="caja_footer">
+                    <h2>Caculadoras</h2>
+                    <a href="">Ritmo de Carrera</a>
+                    <a href="">Estimación de Carrera</a>
+                    <a href="">Zonas de Entrenamiento</a>
+
+                </div>
+                <div class="caja_footer">
+                    <h2>Contactos</h2>
+                    <a href="#">Acerca de</a>
+                    <a href="#">e-mail</a>
+                    
+                </div>   
+                <div class="caja_footer">
+                    <h2>Redes Sociales</h2>
+                    <a href="#"><i  class="fa-brands fa-facebook"></i> Facebook</a>
+                    <a href="#"><i  class="fa-brands fa-twitter"></i> Twitter</a>
+                    <a href="#"><i  class="fa-brands fa-linkedin"></i> Linkedin</a>
+                    <a href="#"><i  class="fa-brands fa-instagram"></i> Instagram</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="script.js"></script>
+</body>
+</html>

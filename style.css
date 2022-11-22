@@ -1,0 +1,360 @@
+
+*{
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+    font-family: 'open sans';
+    background: #ffe5c8;
+  }
+.menu {
+    top: 0px;
+    z-index: 7;
+    width: 100%;
+    background-color: #f9a55cec;
+    padding: 20px;
+    margin: 30px 0 30px 0;
+    align-items: center;
+    text-align: center;
+}
+.titulo{
+  font-family: 'Hind Siliguri', sans-serif;
+  font-size: 50px;
+}
+
+
+.menu .menu__items {
+  display: flex;
+  list-style: none;
+  margin-right: 30px;
+}
+.menu .menu__items li {
+  border-radius: 3px;
+  margin: auto;
+}
+.menu .menu__items a {
+  padding: 7px 13px;
+  text-decoration: none;
+  font-size: 18px;
+  display: block;
+  text-transform: uppercase;
+  color: #fff;
+}
+.menu .menu__items li:hover,
+.menu li:active {
+  background-color: #f9a55cec;
+  transition: 0.4s;
+}
+.logo {
+  cursor: pointer;
+}
+.logo img {
+  height: 130px;
+  width: auto;
+  transition: all 0.4s;
+  border-radius: 30px;
+}
+.logo img:hover {
+  transform: scale(1.2);
+}
+.enlace {
+  font-size: 18px;
+  color: #e1e1e1;
+  font-family: inherit;
+  font-weight: 800;
+  cursor: pointer;
+  position: relative;
+  border: none;
+  background: none;
+  text-transform: uppercase;
+  transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition-duration: 400ms;
+  transition-property: color;
+}
+.enlace:focus,
+.enlace:hover {
+  color: #fff;
+}
+.enlace:focus:after,
+.enlace:hover:after {
+  width: 100%;
+  left: 0%;
+}
+.enlace:after {
+  content: "";
+  pointer-events: none;
+  bottom: -2px;
+  left: 50%;
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background-color: #fff;
+  transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition-duration: 400ms;
+  transition-property: width, left;
+}
+
+i{
+  padding: 0px 5px 0px 0px;
+  width: 20px;
+  height: 20px;
+}
+.btn__menu {
+    margin-right: 30px;
+    font-size: 25px;
+    color: #fff;
+    cursor: pointer;
+    display: none;
+}
+
+@media screen and (max-width: 700px) {
+
+  .btn__menu{
+      position: relative;
+      display: inline-flex;
+      left: 10vw;
+  }
+  .menu__items {
+      position: fixed;
+      width: 100%;
+      height: calc(100% - 65px);
+      background-color: #414141;
+      top: -100vh;
+      text-align: center;
+      transition: all 0.4s;
+      flex-direction: column;
+  }
+  .menu__items li {
+      margin: 30px 0 0 0;
+      line-height: 30px;
+  }
+  .menu__items li:hover {
+    background: none;
+  }
+  .menu__items li a {
+    font-size: 20px;
+    color: #fff;
+    font-weight: bold;
+  }
+  .menu__items li a:hover {
+    color: #e9183b;
+  }
+ 
+}
+
+#buscar-btn, #borr-carr, #calc_ritmo, #calc_imc, #EstimarCarr, #calc_Zonas, .boton-carr{
+  color: #f7902a;
+  background: transparent;
+  border: 2px solid #0099CC;
+  border-radius: 6px;
+  border: none;
+      color: white;
+      padding: 16px 32px;
+      text-align: center;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+      -webkit-transition-duration: 0.4s; /* Safari */
+      transition-duration: 0.4s;
+      cursor: pointer;
+      text-decoration: none;
+      text-transform: uppercase;
+      
+}
+#buscar-btn, #borr-carr, #calc_ritmo, #calc_imc, #EstimarCarr, #calc_Zonas, .boton-carr{
+      background-color: white; 
+      color: black; 
+      border: 2px solid #008CBA;
+}
+.boton-carr:hover{
+  background-color: #f7902a;
+  color: rgb(255, 255, 255);
+}
+
+#buscar-btn:hover, #borr-carr:hover, #calc_ritmo:hover, #calc_imc:hover, #EstimarCarr:hover, #calc_Zonas:hover{
+  background-color: #f7902a;
+  color: white;
+}
+
+#contenedorProductos{
+    background-image: url(/Proyectos/ProyectoFinal/img/contenedorp.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 600px;
+    background-color: #f5c492;
+    display: flex;
+}
+.producto {
+  display: flexbox;
+  width: 100%;
+  height: 500px;
+  
+  /* Old browsers */
+  background: -moz-linear-gradient(-45deg, #f7902a 8%, #12123e 83%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(-45deg,  #f7902a 8%, #12123e 83%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(135deg,  #f7902a 8%, #12123e 83%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#fa782e', endColorstr='#c82930', GradientType=1);
+  /* IE6-9 fallback on horizontal gradient */
+  border-radius: 10px 10px 10px 10px;
+  
+  margin: 50px;
+  padding: 5px;
+}
+.producto img{
+  
+  width: 100%;
+  height: 80%;
+  border-radius: 10px 10px 10px 10px;
+
+}
+
+
+.producto h3, p{
+  font-family: "Century Gothic";
+  text-decoration: none;
+  color: #f4f3f3;
+  font-size: 15px;
+  margin: 3px 0px;
+  padding: 5px;
+}
+
+#agregar-carr{
+    border: 2px solid #f4a75a;
+  border-radius: 6px;
+  font-family: "Century Gothic";
+  text-decoration: none;
+  font-size: 20px;
+  margin: 10px 0px;
+  padding: 5px;
+  color: #000000
+}
+#carrito{
+  font-family: "Century Gothic";
+  font-size: 25px;
+  width: 100%;
+  height: 150px;
+  border: 3px solid rgb(159, 155, 155);
+
+}
+.itemCarrito{
+  color: rgba(0, 0, 0, 0.783);
+  display: flex;
+  justify-content: space-around;
+ 
+}
+
+.productoC{
+  
+  font-size: 25px;
+  color: rgba(0, 0, 0, 0.783);
+  display: flex;
+  justify-content: space-around;
+}
+
+
+
+
+.titulos_calc{
+  font-family: "Century Gothic";
+  text-decoration: none;
+  font-size: 40px;
+  margin: 30px 0px;
+  padding: 20px;
+}
+.calculadoras{
+  background-color: #ebbd95ec;
+  font-family: "Century Gothic";
+  text-decoration: none;
+  font-size: 20px;
+  border: 2px solid #bec1e9;
+  margin: 30px 0px;
+  padding: 20px;
+}
+
+#res_zonas{
+  background-color: #f1d8bf;
+  width: 50%;
+}
+.zona{
+  width: 50%;
+  height: 30px;
+}
+
+.gris{
+  background-color: gray;
+  padding: 5px;
+}
+
+.celeste{
+  background-color: rgb(70, 187, 237);
+  padding: 5px;
+}
+
+
+.verde{
+  background-color: rgb(151, 247, 122);
+}
+
+.naranja{
+  background-color: rgb(248, 146, 30);
+}
+
+.rojo{
+  background-color: rgb(248, 0, 0);
+}
+footer{
+  background-color: rgb(242, 247, 242);
+  width: 100%;
+  background-size: cover;
+}
+.termino{
+  padding: 20px;
+}
+.contenedor_footer{
+  background-image: url(/Proyectos/ProyectoFinal/img/fondofooter2.jpg);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 10px;
+  max-width: 100%;
+  margin: auto;
+
+}
+.caja_footer{
+  display: flex;
+  flex-direction: column;
+  flex-basis: 0;
+  flex-grow: 1;
+  padding:40px;
+ }
+ .caja_footer h2{
+  font-family: "Century Gothic";
+  text-decoration: none;
+  font-size: 30px;
+ }
+ .caja_footer a {
+  font-family: "Century Gothic";
+  text-decoration: none;
+  margin: 10px 0px;
+  font-size: 20px;
+  color: #000;
+ }
+ .caja_footer h2:hover,
+ .caja_footer a:hover,
+ .caja_footer a i:hover{
+  color: rgb(251, 0, 0);
+ }
+
+
+
+
