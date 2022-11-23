@@ -240,20 +240,19 @@ i{
   font-family: "Century Gothic";
   font-size: 25px;
   width: 100%;
-  height: 150px;
+  height: 300px;
   border: 3px solid rgb(159, 155, 155);
 
 }
-.itemCarrito{
-  color: rgba(0, 0, 0, 0.783);
+.itemCarrito {
+  font-family: "Century Gothic";
+  font-size: 25px;
   display: flex;
   justify-content: space-around;
- 
-}
+ }
 
 .productoC{
-  
-  font-size: 25px;
+   font-size: 25px;
   color: rgba(0, 0, 0, 0.783);
   display: flex;
   justify-content: space-around;
@@ -278,6 +277,11 @@ i{
   margin: 30px 0px;
   padding: 20px;
 }
+
+.calculadoras p{
+  color: rgb(91, 86, 86);
+}
+
 
 #res_zonas{
   background-color: #f1d8bf;
@@ -315,9 +319,7 @@ footer{
   width: 100%;
   background-size: cover;
 }
-.termino{
-  padding: 20px;
-}
+
 .contenedor_footer{
   background-image: url(/Proyectos/ProyectoFinal/img/fondofooter2.jpg);
   background-size: 100%;

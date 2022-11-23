@@ -9,15 +9,13 @@ let productos = [
 let contenedorProductos = document.getElementById("contenedorProductos")
 renderizarProductos()
 
-
-
 function renderizarProductos(filtradosP){
    let renderizarP = productos
     if (filtradosP){
         renderizarP = filtradosP 
     }
     contenedorProductos.innerHTML = ""
-    for (const producto of renderizarP) {
+    renderizarP.forEach(producto => {
         let tarjetaProducto = document.createElement('div')
         tarjetaProducto.className = "producto"
         tarjetaProducto.innerHTML = `
@@ -27,18 +25,17 @@ function renderizarProductos(filtradosP){
             <button class="boton-carr" id=${producto.id}>Agregar al Carrito</button>
         `
         contenedorProductos.append(tarjetaProducto)
-    } 
+        
+    })
 }
 
 
 /// BUSCAR
  let inputBuscar = document.getElementById("buscar")
- //let buscar_btn = document.getElementById("buscar-btn")
-
- inputBuscar.oninput = () => {
+ 
+inputBuscar.oninput = () => {
     let productosFiltrados = productos.filter(producto => producto.nombre.includes(inputBuscar.value))
     renderizarProductos(productosFiltrados)
-       
 }
 
  ///CARRITO
@@ -46,12 +43,56 @@ let botones =document.getElementsByClassName("boton-carr")
 let carrito = document.getElementById("carrito")
 
 //JSON Carrito
- let carritoGuardado = []
- if (localStorage.getItem('carrito')){
-    carritoGuardado = JSON.parse(localStorage.getItem('carrito'))
+ let carritoGuardado = JSON.parse(localStorage.getItem('carrito')) || []
+
+
+
+for (const boton of botones) {
+    boton.onclick = (e) => {
+        Swal.fire(
+            "Ando",  
+        )
+        AgregarCarrito(e)
+        
+    }
+}  
+ 
+
+///renderizar el Carrito
+ function renderCarrito(){
+    carrito.innerHTML = ""
+    carritoGuardado.forEach(producto =>{
+        const cardCarrito = document.createElement('div')
+        cardCarrito.innerHTML += `
+            <div class = "itemCarrito">
+                <p class= "productoC">${producto.nombre}</p>
+                <p class= "productoC"> - $ ${producto.precio}</p>
+            </div>
+            `
+        carrito.append(cardCarrito)
+    })
  }
 
- for (const i of carritoGuardado) {
+
+
+  function AgregarCarrito(id){
+        
+        const productoBuscado = productos.find(producto => producto.id == id.target.id)
+        carritoGuardado.push({id: productoBuscado.id, nombre: productoBuscado.nombre, precio: productoBuscado.precio})
+        console.log(carritoGuardado)
+        localStorage.setItem('carrito', JSON.stringify(carritoGuardado))
+        renderCarrito()
+    }
+
+
+
+ 
+
+
+
+
+
+ /* for (const i of carritoGuardado) {
     let productoBuscado = productos.find(producto => producto.id == i.id)
     carrito.innerHTML += `
             <div class = "itemCarrito">
@@ -75,7 +116,9 @@ for (const boton of botones) {
         carritoGuardado.push({id: productoBuscado.id, nombre: productoBuscado.nombre, precio: productoBuscado.precio})
         localStorage.setItem('carrito', JSON.stringify(carritoGuardado))
     }
-}  
+}   */
+
+
 //Borrar carrito//
 let borrarCarr_btn = document.getElementById("borr-carr")
 borrarCarr_btn.onclick = () => {
