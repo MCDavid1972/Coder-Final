@@ -20,16 +20,13 @@
                 </div>
                 <ul class="menu__items">
                     <li class="enlace">
-                        <a href="#">Inicio</a>
+                        <a href="#serv">Servicios</a>
                     </li>
                     <li class="enlace">
-                        <a href="#">Servicios</a>
+                        <a href="#ritmoT">Calculadoras</a>
                     </li>
                     <li class="enlace">
-                        <a href="#">Carreras</a>
-                    </li>
-                    <li class="enlace">
-                        <a href="#">Contacto</a>
+                        <a href="#contactos">Contacto</a>
                     </li>
                     </li>
                 </ul>
@@ -44,7 +41,7 @@
         <button id="borr-carr" >Borrar Carrito</button>
 
         <div class="calculadoras">
-            <h1 class="titulos_calc">Cálculo de ritmo</h1>
+            <h1 class="titulos_calc" id="ritmoT">Cálculo de ritmo</h1>
             <p><label for="">Distancia Recorrida: </label><input id="distancia"></p>
             <p><label for="">Horas: </label><input id="hs"></p>
             <p><label for="">Minutos: </label><input id="min"></p>
@@ -60,7 +57,7 @@
             <h1 id="imc"></h1>
         </div>
         <div class= "calculadoras">
-            <h1 class="titulos_calc">Estimación de Carrera</h1>
+            <h1 class="titulos_calc" id="estimT">Estimación de Carrera</h1>
             <p>Ingrese distancia y tiempo conocido</p>
             <p><label for="">Distancia Recorrida </label><input id="distanciaConocida" ></p>
             <p><label for="">Horas: </label><input id="hsConocida" ></p>
@@ -72,7 +69,7 @@
             <h1 id="ResulEstm"></h1>
         </div>
         <div class= "calculadoras">
-            <h1 class="titulos_calc">Zonas de Entrenamiento</h1>
+            <h1 class="titulos_calc" id="zonasE">Zonas de Entrenamiento</h1>
             <p>Ingrese el Sexo, "M" o "F"</p>
             <p><label for="">Sexo: </label><input id="sexo" ></p>
             <p><label for="">Edad: </label><input id="edad" ></p>
@@ -82,7 +79,10 @@
         </div>
         
         <div class= "servicios">
-          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Commodi, quam sit tempore vitae aspernatur voluptatem ratione deleniti magnam nobis nam incidunt assumenda odit error suscipit dolorem recusandae architecto officia maxime?</p>
+            <h1  id="serv">SERVICIOS</h1>
+            <div class="box_serv">Toma de Tiempos</div>
+            
+            <div class="box_serv">Organizacion de Eventos</div>   
         </div>
 
 
@@ -93,13 +93,13 @@
                
                 <div class="caja_footer">
                     <h2>Caculadoras</h2>
-                    <a href="">Ritmo de Carrera</a>
-                    <a href="">Estimación de Carrera</a>
-                    <a href="">Zonas de Entrenamiento</a>
+                    <a href="#ritmoT">Ritmo de Carrera</a>
+                    <a href="#estimT">Estimación de Carrera</a>
+                    <a href="#zonasE">Zonas de Entrenamiento</a>
 
                 </div>
                 <div class="caja_footer">
-                    <h2>Contactos</h2>
+                    <h2 id="contactos">Contactos</h2>
                     <a href="#">Acerca de</a>
                     <a href="#">e-mail</a>
                     

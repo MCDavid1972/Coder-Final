@@ -1,11 +1,13 @@
 ///PRODUCTOS
-let productos = [
-    {id:"10", nombre: "k42series salomon", precio: 500, cupo: 3000, img:"/Proyectos/ProyectoFinal/img//fondoK42.jpg"},													
-    {id:"20", nombre: "utacch", precio: 1000, cupo: 200, img:"/Proyectos/ProyectoFinal/img/Utacch2.jpg"},
-    {id:"30", nombre: "patagonia run", precio: 1500, cupo: 200, img:"/Proyectos/ProyectoFinal/img/PatagoniaRun.jpg"},
-    {id:"40", nombre: "raid columbia", precio: 2000, cupo: 200, img:"/Proyectos/ProyectoFinal/img/Raid.jpg", },
-    {id:"50", nombre: "valholl", precio: 2000, cupo: 200, img:"/Proyectos/ProyectoFinal/img/Valholl.jpg", }
-]
+
+productos = []
+const productoFetch = async () => {
+    const response = await fetch('/Proyectos/ProyectoFinal/productos.json')
+    const productos = await response.json()
+    renderizarProductos(productos)
+}
+productoFetch()
+
 let contenedorProductos = document.getElementById("contenedorProductos")
 renderizarProductos()
 
@@ -13,7 +15,7 @@ function renderizarProductos(filtradosP){
    let renderizarP = productos
     if (filtradosP){
         renderizarP = filtradosP 
-    }
+    } 
     contenedorProductos.innerHTML = ""
     renderizarP.forEach(producto => {
         let tarjetaProducto = document.createElement('div')
@@ -22,10 +24,13 @@ function renderizarProductos(filtradosP){
             <img src= ${producto.img}>
                 <h3>${producto.nombre} $ ${producto.precio}</h3>
                 <p> Quedan ${producto.cupo}</p>
-            <button class="boton-carr" id=${producto.id}>Agregar al Carrito</button>
+            <button class="boton-carr" id="sel${producto.id}">Agregar al Carrito</button>
         `
         contenedorProductos.append(tarjetaProducto)
-        
+        const carr_btn = document.querySelector(`#sel${producto.id}`)
+        carr_btn.addEventListener('click', ()=>{
+            AgregarCarrito(producto)
+        })
     })
 }
 
@@ -39,23 +44,13 @@ inputBuscar.oninput = () => {
 }
 
  ///CARRITO
-let botones =document.getElementsByClassName("boton-carr")
+//let botones =document.getElementsByClassName("boton-carr")
 let carrito = document.getElementById("carrito")
 
 //JSON Carrito
- let carritoGuardado = JSON.parse(localStorage.getItem('carrito')) || []
+let carritoGuardado = JSON.parse(localStorage.getItem('carrito')) || []
 
-
-
-for (const boton of botones) {
-    boton.onclick = (e) => {
-        Swal.fire(
-            "Ando",  
-        )
-        AgregarCarrito(e)
-        
-    }
-}  
+ 
  
 
 ///renderizar el Carrito
@@ -66,7 +61,7 @@ for (const boton of botones) {
         cardCarrito.innerHTML += `
             <div class = "itemCarrito">
                 <p class= "productoC">${producto.nombre}</p>
-                <p class= "productoC"> - $ ${producto.precio}</p>
+                <p class= "productoC">  $ ${producto.precio}</p>
             </div>
             `
         carrito.append(cardCarrito)
@@ -75,48 +70,11 @@ for (const boton of botones) {
 
 
 
-  function AgregarCarrito(id){
-        
-        const productoBuscado = productos.find(producto => producto.id == id.target.id)
-        carritoGuardado.push({id: productoBuscado.id, nombre: productoBuscado.nombre, precio: productoBuscado.precio})
-        console.log(carritoGuardado)
-        localStorage.setItem('carrito', JSON.stringify(carritoGuardado))
-        renderCarrito()
+  function AgregarCarrito(prod){
+       carritoGuardado.push({id: prod.id, nombre: prod.nombre, precio: prod.precio})
+       localStorage.setItem('carrito', JSON.stringify(carritoGuardado))
+       renderCarrito() 
     }
-
-
-
- 
-
-
-
-
-
- /* for (const i of carritoGuardado) {
-    let productoBuscado = productos.find(producto => producto.id == i.id)
-    carrito.innerHTML += `
-            <div class = "itemCarrito">
-                <p>${productoBuscado.nombre}</p>
-                <p> - $ ${productoBuscado.precio}</p>
-            </div>
-        `
-    
- }
-// Agregar a carrito
-for (const boton of botones) {
-    boton.onclick = (e) => {
-        let productoBuscado = productos.find(producto => producto.id == e.target.id)
-        carrito.innerHTML += `
-            <div class = "itemCarrito">
-                <p class= "productoC" >${productoBuscado.nombre}</p>
-                <p class= "productoC"> $${productoBuscado.precio}</p>
-
-            </div>
-        `
-        carritoGuardado.push({id: productoBuscado.id, nombre: productoBuscado.nombre, precio: productoBuscado.precio})
-        localStorage.setItem('carrito', JSON.stringify(carritoGuardado))
-    }
-}   */
 
 
 //Borrar carrito//
@@ -205,7 +163,6 @@ function predicciondeCarrera(hora, minutos, segundos, nombre, distancia2) {
     if ( distancia2 <= 21 ){
         let tiempoEstimado = tiempoM * ((parseInt(distancia2)/parseInt(nombre)) ** 1.06)
         let tiempoEstimadoH = Math.floor(tiempoEstimado/60)
-        console.log(tiempoEstimadoH)
         let tiempoEstimadoM = Math.floor(tiempoEstimado % 60)
         let tiempoEstimadoS = Math.floor(((tiempoEstimado % 60) - tiempoEstimadoM) * 60)
           
