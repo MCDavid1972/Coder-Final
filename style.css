@@ -185,7 +185,7 @@ i{
 }
 
 #contenedorProductos{
-    background-image: url(/Proyectos/ProyectoFinal/img/contenedorp.jpg);
+    background-image: url(/contenedorp.jpg);
     background-size: 100%;
     background-repeat: no-repeat;
     width: 100%;
@@ -353,7 +353,7 @@ footer{
 }
 
 .contenedor_footer{
-  background-image: url(/Proyectos/ProyectoFinal/img/fondofooter2.jpg);
+  background-image: url(/img/fondofooter2.jpg);
   background-size: 100%;
   background-repeat: no-repeat;
   display: flex;

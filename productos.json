@@ -1,7 +1,7 @@
 [
-    {"id":"10", "nombre": "k42series salomon", "precio": 500, "cupo": 3000, "img":"/Proyectos/ProyectoFinal/img//fondoK42.jpg"},													
-    {"id":"20", "nombre": "utacch", "precio": 1000, "cupo": 200, "img":"/Proyectos/ProyectoFinal/img/Utacch2.jpg"},
-    {"id":"30", "nombre": "patagonia run", "precio": 1500, "cupo": 200, "img":"/Proyectos/ProyectoFinal/img/PatagoniaRun.jpg"},
-    {"id":"40", "nombre": "raid columbia", "precio": 2000, "cupo": 200, "img":"/Proyectos/ProyectoFinal/img/Raid.jpg" },
-    {"id":"50", "nombre": "valholl", "precio": 2000, "cupo": 200, "img":"/Proyectos/ProyectoFinal/img/Valholl.jpg" }
+    {"id":"10", "nombre": "k42series salomon", "precio": 500, "cupo": 3000, "img":"/img/fondoK42.jpg"},													
+    {"id":"20", "nombre": "utacch", "precio": 1000, "cupo": 200, "img":"/img/Utacch2.jpg"},
+    {"id":"30", "nombre": "patagonia run", "precio": 1500, "cupo": 200, "img":"/img/PatagoniaRun.jpg"},
+    {"id":"40", "nombre": "raid columbia", "precio": 2000, "cupo": 200, "img":"/img/Raid.jpg" },
+    {"id":"50", "nombre": "valholl", "precio": 2000, "cupo": 200, "img":"/img/Valholl.jpg" }
 ]

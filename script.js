@@ -2,7 +2,7 @@
 
 productos = []
 const productoFetch = async () => {
-    const response = await fetch('/Proyectos/ProyectoFinal/productos.json')
+    const response = await fetch('/productos.json')
     const productos = await response.json()
     renderizarProductos(productos)
 }
