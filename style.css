@@ -8,7 +8,7 @@
 }
 
 html{
-  scroll-behavior:smooth ;
+  scroll-behavior:smooth;
 }
 
 body {
@@ -16,6 +16,9 @@ body {
     background: #ffe5c8;
   }
 .menu {
+    background-image: url(/img/nav.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
     top: 0px;
     z-index: 7;
     width: 100%;
@@ -50,7 +53,7 @@ body {
 }
 .menu .menu__items li:hover,
 .menu li:active {
-  background-color: #f9a55cec;
+  background-color: #dc7216ec;
   transition: 0.4s;
 }
 .logo {
@@ -185,7 +188,7 @@ i{
 }
 
 #contenedorProductos{
-    background-image: url(/contenedorp.jpg);
+    background-image: url(/img/contenedorp.jpg);
     background-size: 100%;
     background-repeat: no-repeat;
     width: 100%;
@@ -195,6 +198,7 @@ i{
 }
 .producto {
   display: flexbox;
+  max-width: 300px;
   width: 100%;
   height: 500px;
   
@@ -319,6 +323,7 @@ i{
 }
 
 .servicios{
+ 
   width: 100%;
   height: 500px;
   display: flex;
