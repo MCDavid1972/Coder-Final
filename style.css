@@ -12,7 +12,6 @@ html{
 }
 
 body {
-    font-family: 'open sans';
     background: #ffe5c8;
   }
 .menu {
@@ -45,22 +44,27 @@ body {
 }
 .menu .menu__items a {
   padding: 7px 13px;
+  font-family: 'Hind Siliguri', sans-serif;
   text-decoration: none;
-  font-size: 18px;
+  font-size: 20px;
   display: block;
   text-transform: uppercase;
-  color: #fff;
+  color: rgb(245, 238, 238);
 }
 .menu .menu__items li:hover,
 .menu li:active {
   background-color: #dc7216ec;
   transition: 0.4s;
 }
+
+
+
 .logo {
+  
   cursor: pointer;
 }
 .logo img {
-  height: 130px;
+  height: 50px;
   width: auto;
   transition: all 0.4s;
   border-radius: 30px;
@@ -286,6 +290,7 @@ i{
 }
 
 .calculadoras p{
+  font-size: 20px;
   color: rgb(0, 0, 0);
 }
 
@@ -323,10 +328,10 @@ i{
 }
 
 .servicios{
- 
   width: 100%;
   height: 500px;
   display: flex;
+  text-align: center;
   flex-wrap: wrap;
   justify-content: space-between;
   margin-top: 10px;
@@ -334,21 +339,35 @@ i{
   margin: auto;
 }
 
-#serv{
-  font-family: "Century Gothic";
-  text-align: center;
-  color: #f08113;
+.servicios p{
+    font-size: 16px;
+    font-family: "Century Gothic";
+    text-align: justify;
+    color: #313131;
  }
 
 .box_serv{
+  height: 80%;
   font-family: "Century Gothic";
-  font-size: 20px;
+  font-size: 30px;
   display: flex;
   flex-direction: column;
   flex-basis: 0;
   flex-grow: 1;
   padding:40px;
  }
+ 
+ .box_serv img{
+    width: 80%;
+    height: 250px;
+    margin: 0px 10px 0px 30px;
+    padding: 10px;
+    
+
+
+
+ }
+
 
 
 footer{
